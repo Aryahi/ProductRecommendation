@@ -32,8 +32,13 @@ public class Product {
     private String categories;
     
     // Attributes for collaborative filtering
+    @Column(name = "view_count")
     private Integer viewCount = 0;
+
+    @Column(name = "purchase_count")
     private Integer purchaseCount = 0;
+
+    @Column(name = "average_rating")
     private Double averageRating = 0.0;
 
 }

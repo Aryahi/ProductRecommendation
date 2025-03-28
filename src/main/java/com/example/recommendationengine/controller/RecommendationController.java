@@ -33,9 +33,9 @@ public class RecommendationController {
     public ResponseEntity<List<Product>> getPopularProducts(
             @RequestParam(defaultValue = "5") int limit) {
         List<Product> popularProducts = recommendationService.getPopularProducts(limit);
-        return ResponseEntity.ok(popularProducts);
+        return ResponseEntity.ok(popularProducts);  // 
     }
-    
+
     @GetMapping("/price-range")
     public ResponseEntity<List<Product>> getProductsByPriceRange(
             @RequestParam Double minPrice,
